@@ -72,13 +72,13 @@ img {
   height: auto;
 }
 
-/* Временный цвет фона для того чтобы видеть абзацы с белым текстом!!!!!!!!!!!!!! */
+/* Временный цвет фона для того чтобы видеть абзацы с белым текстом!!!!!!!!!!!!!!
 .temporary-bgc {
   background-color: #afeeee;
-  /* ------ Добавлены после исправления 2 строки ниже */
+  ------ Добавлены после исправления 2 строки ниже
   min-height: 600px;
   padding-top: 200px;
-}
+} */
 
 /* Логотип */
 
@@ -159,9 +159,10 @@ img {
 }
 
 .contacts-nav .link {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   color: var(--primary-text-color);
 }
@@ -171,6 +172,26 @@ img {
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
   color: var(--accent-color);
+}
+
+/* Иконки в шапке */
+.envelope::before {
+  content: "";
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  background-image: url(../images/envelope.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.phone::before {
+  content: "";
+  height: 15px;
+  width: 10px;
+  margin-right: 10px;
+  background-image: url(../images/smartphone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* Подвал */
@@ -253,10 +274,10 @@ footer {
 }
 
 .footer-button {
-  display: inline-block;
+  display: inline-flex;
   border-radius: 4px;
-  padding: 10px 45px;
-
+  padding: 10px 29px;
+  align-items: center;
   font-weight: 900;
   font-size: 16px;
   line-height: 1.87;
@@ -276,4 +297,15 @@ footer {
 
 .footer-social .social-item:not(:last-child) {
   margin-right: 11px;
+}
+
+/* Иконки в подвале */
+.footer-button::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../images/icon_send.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }

@@ -2,6 +2,25 @@
 
 .hero {
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.overlay {
+  outline: 1px solid black;
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Hero.jpg);
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -75,21 +94,35 @@
 
 /* Преимущества */
 
-.feature .item-image {
-  width: 270px;
+/* Иконки для секции Преимущества */
+.feature-list .item::before {
+  content: "";
+  display: block;
   height: 120px;
-  background-color: #f5f4fa;
-  padding: 25px 104px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--second-bgc-color);
   border-radius: 4px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astranaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 
 .section.feature {
   border-bottom: 1px solid var(--header-line);
-}
-
-/* ------Добавлен ховер после исправления ошибок */
-.feature .item-image:hover {
-  background-color: var(--accent-color);
 }
 
 .feature .feature-list {
@@ -134,7 +167,7 @@
 .work-examples {
   display: block;
   border-radius: 4px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 /* Наша команда */
@@ -147,7 +180,14 @@
 }
 
 .our-team .team-member {
+  background-color: #ffffff;
   width: calc((100% - 90px) / 4);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
 }
 
 .our-team .team-member:not(:last-child) {
@@ -175,16 +215,17 @@
   font-weight: 500;
 }
 
-.photos {
+/* .photos {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-}
+} */
 
 /* Иконки соцсетей Нашей команды */
 
 .our-team .our-team-social {
   display: flex;
   justify-content: center;
+  margin-bottom: 24px;
 }
 
 .our-team .social:not(:last-child) {
