@@ -121,6 +121,8 @@
   background-image: url(../images/astronaut.svg);
 }
 
+/* ------------ */
+
 .section.feature {
   border-bottom: 1px solid var(--header-line);
 }
@@ -143,6 +145,10 @@
 }
 
 /* Чем мы занимаемся */
+
+.our-work {
+  background-color: teal;
+}
 
 .our-work .work-list {
   display: flex;
@@ -172,7 +178,8 @@
 
 /* Наша команда */
 .section.colored {
-  background-color: var(--second-bgc-color);
+  /* background-color: var(--second-bgc-color); */
+  background-color: teal;
 }
 
 .team .our-team {
