@@ -72,13 +72,10 @@ img {
   height: auto;
 }
 
-/* Временный цвет фона для того чтобы видеть абзацы с белым текстом!!!!!!!!!!!!!!
+/* Временный цвет фона для того чтобы видеть абзацы с белым текстом!!!!!!!!!!!!!! */
 .temporary-bgc {
   background-color: #afeeee;
-  ------ Добавлены после исправления 2 строки ниже
-  min-height: 600px;
-  padding-top: 200px;
-} */
+}
 
 /* Логотип */
 
@@ -172,10 +169,17 @@ img {
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
   color: var(--accent-color);
+  --color3: var(--accent-color);
 }
 
 /* Иконки в шапке */
-.envelope::before {
+
+.contacts-nav .button-icon {
+  margin-right: 10px;
+}
+
+/* Оставил для себя оформление через псевдоэлементы */
+/* .envelope::before {
   content: "";
   height: 12px;
   width: 16px;
@@ -183,8 +187,8 @@ img {
   background-image: url(../images/envelope.svg);
   background-size: contain;
   background-repeat: no-repeat;
-}
-.phone::before {
+} */
+/* .smartphone::before {
   content: "";
   height: 15px;
   width: 10px;
@@ -192,7 +196,7 @@ img {
   background-image: url(../images/smartphone.svg);
   background-size: contain;
   background-repeat: no-repeat;
-}
+} */
 
 /* Подвал */
 
@@ -286,6 +290,12 @@ footer {
   background-color: var(--accent-color);
 }
 
+/* Иконка самолетика в подвале */
+
+.button-icon.delivery {
+  margin-left: 10px;
+}
+
 /* Соцсети в футере */
 .footer-social {
   display: flex;
@@ -296,11 +306,47 @@ footer {
 }
 
 .footer-social .social-item:not(:last-child) {
-  margin-right: 11px;
+  margin-right: 10px;
 }
 
-/* Иконки в подвале */
-.footer-button::after {
+.icon-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--title-text-white);
+  border-radius: 50%;
+}
+
+.footer-social .icon-social {
+  background-color: var(--copyright-line);
+  --color4: var(--title-text-white);
+}
+
+.footer-social .icon-social:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-social .button-icon {
+  fill: var(--title-text-white);
+}
+
+.our-team-social .button-icon {
+  fill: var(--icon-border-color);
+}
+
+.our-team-social .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-social .icon-social:hover {
+  background-color: var(--accent-color);
+  --color4: var(--title-text-white);
+}
+
+/* Оставил для себя оформление через псевдоэлементы */
+/* .footer-button::after {
   content: "";
   width: 24px;
   height: 24px;
@@ -308,4 +354,65 @@ footer {
   background-image: url(../images/icon_send.svg);
   background-size: contain;
   background-repeat: no-repeat;
+} */
+
+/* Иконки соцсетей Нашей команды и футера*/
+/* .icon-social {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
 }
+
+.icon-social:not(:last-child) {
+  margin-right: 10px;
+}
+
+.our-team-social .icon-social {
+  background-color: #ffffff;
+}
+
+.our-team-social .instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.our-team-social .twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.our-team-social .facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.our-team-social .linkedin {
+  background-image: url(../images/linkedin.svg);
+}
+
+.footer-social .icon-social {
+  background-color: var(--copyright-line);
+}
+
+.footer-social .instagram {
+  background-image: url(../images/instagram_white.svg);
+}
+
+.footer-social .twitter {
+  background-image: url(../images/twitter_white.svg);
+}
+
+.footer-social .facebook {
+  background-image: url(../images/facebook_white.svg);
+}
+
+.footer-social .linkedin {
+  background-image: url(../images/linkedin_white.svg);
+}
+
+.footer-social .icon-social:hover {
+  background-color: var(--accent-color);
+} */
+
+/* --------- */
